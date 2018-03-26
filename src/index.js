@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Main from './components/main'
 
 const title = 'hello world';
 
 ReactDOM.render(
-    <div>{title}</div>,
+    <div><Main/></div>,
     document.getElementById('app')
 );
-module.hot.accept()
+//module.hot.accept()
