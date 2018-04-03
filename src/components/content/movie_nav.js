@@ -44,6 +44,15 @@ const styles={
         paddingBottom:15,
         position:'relative',
         overFlow:'visible !important'
+    },
+    nav_search:{
+       float:'left',
+       width:470,
+       height:34,
+       textAilgn:'center',
+       marginRight:-3,
+       cursor:'text',
+       backgroundImage: 'url(static/img/nav_mv_bg.png)',
     }
 }
 
