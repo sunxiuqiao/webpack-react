@@ -1,14 +1,16 @@
+const path = require('path')
 const webpack = require('webpack')
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-module.exports = {
+const CopywebpackPlugin = require('copy-webpack-plugin')
+
+module.exports = [{
+    context: __dirname,
     entry: {
         app: './src/index.js'
     },
     output: {
         filename: '[name].js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname,'dist') ,
+        
     },
     module: {
         rules: [
@@ -33,17 +35,13 @@ module.exports = {
     },
     
     plugins: [
-        new HtmlWebpackPlugin({template: 'public/index.html'}),
         new webpack.HotModuleReplacementPlugin(),
-        new CopyWebpackPlugin([
+        new CopywebpackPlugin([
             {
-                from: path.resolve(__dirname, 'src/static'),
-                to: 'static'
+                from: path.resolve(__dirname,'src/static'),
+                to:'static'
             }
-        ]),
-    ],
-    devServer: {
-        contentBase: path.join(__dirname, "dist")
-       
-    }
-};
+        ])
+    ]
+    
+}];

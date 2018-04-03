@@ -1,11 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom'
 import Main from './components/main'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 
-const title = 'hello world';
 
-ReactDOM.render(
-    <div><Main/></div>,
-    document.getElementById('app')
-);
-//module.hot.accept()
+render(
+    <MuiThemeProvider>
+        <Main/>
+    </MuiThemeProvider>,
+   
+    document.getElementById('root')
+)

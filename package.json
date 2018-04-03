@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "start": "node_modules/.bin/webpack-dev-server --config webpack.config.js --open",
+    "cbuild": "node_modules/.bin/webpack -p --config webpack.release.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +24,8 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.1",
+    "html-webpack-plugin": "^3.1.0",
     "react-hot-loader": "^4.0.0",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
@@ -30,8 +33,9 @@
   },
   "dependencies": {
     "material-ui": "^0.20.0",
+    "path": "^0.12.7",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.3.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2"
