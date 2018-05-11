@@ -50,6 +50,9 @@ const style={
         fontFamily:'Helvetica, Arial, sans-serif',
         color:'#d5d5d5',
         height:28
+    },
+    ulmargin:{
+        marginTop:0
     }   
 }
 
@@ -96,7 +99,7 @@ class Top extends Component{
             <div style={style.top}>
                 <div style={style.top1}>
                     <div>
-                        <ul>
+                        <ul style={style.ulmargin}>
                             {
                                 top_items.map((item,i)=>{
                                     return<li key={i} style={style.top_item}><a href='' style={fontColor} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>{item}</a></li>

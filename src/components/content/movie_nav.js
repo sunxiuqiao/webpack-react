@@ -61,9 +61,7 @@ const styles={
        height:34,
        textAilgn:'center',
        marginRight:-3,
-       cursor:'text',
-       backgroundImage: 'url(static/img/nav_mv_bg.png)',
-        backgroundRepeat: 'no-repeat'
+       cursor:'text'
     },
     nav_bottom:{
         width: 1040,
@@ -114,7 +112,8 @@ const styles={
        padding: '35 0 0 0',
        overflow: 'hidden',
         cursor: 'pointer',
-        backgroundImage: 'url(static/img/nav_mv_bg)',
+        background: 'url(static/img/nav_mv_bg.png) no-repeat 0 -40',
+       
         marginRight: 3,
         verticalAlign: 'middle',
     },

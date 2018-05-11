@@ -18,7 +18,7 @@ module.exports = {
                 use: ['babel-loader']
             },{
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ["style-loader", "css-loader"]
             }, {
                 test: /\.(png|gif|jpg|jpeg|svg|xml|json)$/,
                 use: ['url-loader']
@@ -29,7 +29,7 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['*', '.js', '.jsx']
+        extensions: ['*', '.js', '.jsx', '.css']   
     },
     
     plugins: [
@@ -41,6 +41,11 @@ module.exports = {
                 to: 'static'
             }
         ]),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
     ],
     devServer: {
         contentBase: path.join(__dirname, "dist")
